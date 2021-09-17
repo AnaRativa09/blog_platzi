@@ -1,6 +1,10 @@
-export const getAll = () => (dispatch) => {
+import axios from 'axios';
+
+export const getAll = () => async (dispatch) => {
+  const responseData = await axios.get('https://jsonplaceholder.typicode.com/users');
+
   dispatch({
     type: 'get-users',
-    payload:[1,2,3]
-  }) 
-}
+    payload: responseData.data,
+  });
+};

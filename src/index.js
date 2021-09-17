@@ -2,15 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import App from './components/App';
+import reduxThunk from 'redux-thunk';
 
+import App from './components/App';
 import reducers from './reducers';
 
 const AppStore = createStore(
   reducers, // Todos los reducers
   {}, // Estado inicial
+  applyMiddleware(reduxThunk),
 );
 
 ReactDOM.render(
