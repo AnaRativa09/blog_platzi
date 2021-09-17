@@ -1,12 +1,12 @@
 const INITIAL_STATE = {
-  users: []
+  users: [],
 };
 
 export default (state = INITIAL_STATE, action) => {
-  switch(action.type){
+  switch (action.type) {
     case 'get-users':
-      return {...state, users: action.payload}
-    
-      default: return state;
+      return { ...state, users: action.payload };
+
+    default: return state;
   }
-}
+};
