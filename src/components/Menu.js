@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Menu = (props) => (
+const Menu = () => (
   <nav id="menu">
     <Link to="/">
       Users

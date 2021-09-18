@@ -5,7 +5,7 @@ import Users from './users/Users';
 
 const Prueba = () => <div> Holi, tasks</div>;
 
-const App = (props) => (
+const App = () => (
   <BrowserRouter>
     <Menu />
     <div className="margen">

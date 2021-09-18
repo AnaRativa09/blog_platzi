@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import * as usersActions from '../../actions/usersActions';
 
 class Users extends Component {
-
   componentDidMount() {
     this.props.getAll();
   }
@@ -44,12 +43,10 @@ class Users extends Component {
           </tbody>
         </table>
       </div>
-    )
+    );
   }
-};
+}
 
-const mapStateToProps = (reducers) => {
-  return reducers.usersReducer;
-};
+const mapStateToProps = (reducers) => reducers.usersReducer;
 
 export default connect(mapStateToProps, usersActions)(Users);

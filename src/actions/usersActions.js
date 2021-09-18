@@ -8,3 +8,12 @@ export const getAll = () => async (dispatch) => {
     payload: responseData.data,
   });
 };
+
+export const getAll2 = () => async (dispatch) => {
+  const responseData = await axios.get('https://jsonplaceholder.typicode.com/users');
+
+  dispatch({
+    type: 'get-users',
+    payload: responseData.data,
+  });
+};
