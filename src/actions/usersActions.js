@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as actionTypes from '../types/usersTypes';
 
-export const getAll = () => async (dispatch) => {
+export const getAllUsers = () => async (dispatch) => {
   dispatch({
     type: actionTypes.LOADING,
   });
